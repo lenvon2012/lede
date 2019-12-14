@@ -11,7 +11,7 @@ name: OpenWrt-CI
 
 on:
   schedule:
-    - cron: 0 10 */5 * *
+    - cron: '0 10 */5 * *'
   push:
     branches: 
       - master
@@ -143,7 +143,7 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-aria2=y
-          CONFIG_PACKAGE_luci-app-baidupcs-web=y
+          # CONFIG_PACKAGE_luci-app-baidupcs-web=y
           CONFIG_PACKAGE_luci-app-docker=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-hd-idle=y
@@ -171,6 +171,10 @@ jobs:
           CONFIG_PACKAGE_luci-app-wol=y
           CONFIG_PACKAGE_luci-app-aliddns=y
           CONFIG_PACKAGE_luci-app-ntpc=y
+          CONFIG_PACKAGE_luci-app-dnscrypt-proxy=y
+          CONFIG_PACKAGE_luci-app-dnscrypt-dnsforwarder=y
+          CONFIG_PACKAGE_luci-app-ntpc=y
+          CONFIG_PACKAGE_luci-app-upnp=y
           EOF
 
           # LuCI主题:
